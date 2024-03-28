@@ -21,8 +21,8 @@ public class TC04 extends PostReqResponse {
     public void test01() {
         generateResponse(reqBody).then().assertThat().
                 statusCode(200).
-                contentType("application/json")
-                .body("statusCode", equalTo("Success"),
+                contentType("application/json").
+                body("statusCode", equalTo("Success"),
                         "status", equalTo("Success"));
 
         JsonPath responseJP = generateResponse(reqBody).jsonPath();
