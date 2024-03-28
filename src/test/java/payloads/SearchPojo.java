@@ -1,11 +1,11 @@
-package utils;
+package payloads;
 
-import org.json.JSONObject;
+import utils.ConfigReader;
 
-public class TestPojo {
+public class SearchPojo {
 
 
-    private int memberId;
+    private int memberId = Integer.parseInt(ConfigReader.getProperty("memberId"));
     private int size;
     private int currentPage;
 
@@ -65,7 +65,7 @@ public class TestPojo {
 
 
     // 3. Parametreli Constructor olusturduk
-    public TestPojo(int memberId, int size, int currentPage, String keyword, boolean isApplied) {
+    public SearchPojo(int size, int currentPage, String keyword, boolean isApplied) {
         this.memberId = memberId;
         this.size = size;
         this.currentPage = currentPage;
@@ -74,16 +74,7 @@ public class TestPojo {
 
     }
 
-    public TestPojo() {
+    public SearchPojo() {
     }
 
-
 }
-
-
-
-
-
-
-
-
