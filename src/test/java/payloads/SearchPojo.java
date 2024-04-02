@@ -8,17 +8,8 @@ public class SearchPojo {
     private int memberId = Integer.parseInt(ConfigReader.getProperty("memberId"));
     private int size;
     private int currentPage;
-
-    @Override
-    public String toString() {
-        return "TestPojo{" +
-                "memberId=" + memberId +
-                ", size=" + size +
-                ", currentPage=" + currentPage +
-                ", keyword='" + keyword + '\'' +
-                ", isApplied=" + isApplied +
-                '}';
-    }
+    private String keyword;
+    private boolean isApplied;
 
     public int getMemberId() {
         return memberId;
@@ -60,13 +51,8 @@ public class SearchPojo {
         isApplied = applied;
     }
 
-    private String keyword;
-    private boolean isApplied;
 
-
-    // 3. Parametreli Constructor olusturduk
     public SearchPojo(int size, int currentPage, String keyword, boolean isApplied) {
-        this.memberId = memberId;
         this.size = size;
         this.currentPage = currentPage;
         this.keyword = keyword;
@@ -75,6 +61,17 @@ public class SearchPojo {
     }
 
     public SearchPojo() {
+    }
+
+    @Override
+    public String toString() {
+        return "TestPojo{" +
+                "memberId=" + memberId +
+                ", size=" + size +
+                ", currentPage=" + currentPage +
+                ", keyword='" + keyword + '\'' +
+                ", isApplied=" + isApplied +
+                '}';
     }
 
 }

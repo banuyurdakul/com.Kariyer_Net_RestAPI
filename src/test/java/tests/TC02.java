@@ -12,6 +12,8 @@ import java.util.List;
 import static org.hamcrest.Matchers.equalTo;
 
 public class TC02 extends PostReqResponse {
+    //Designed to Fail
+
     int size = 5;
     SearchPojo reqbody = new SearchPojo(size, 1, "ios developer", true);
 

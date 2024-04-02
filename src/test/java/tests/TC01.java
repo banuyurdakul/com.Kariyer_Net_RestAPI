@@ -20,8 +20,6 @@ public class TC01 extends PostReqResponse {
                 .body("statusCode", equalTo("Success"),
                         "status", equalTo("Success"));
 
-
-
     }
 
 

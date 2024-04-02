@@ -12,7 +12,7 @@ public class Endpoint {
     @BeforeSuite
     public void setUp() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigReader.getProperty("baseUrl")).build();
-        spec.pathParams("pp1",ConfigReader.getProperty("param1"));
+        spec.pathParam("pp1",ConfigReader.getProperty("param1"));
 
     }
 
